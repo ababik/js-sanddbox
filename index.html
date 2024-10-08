@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script async src="index.js"></script>
+    <script>
+        document.addEventListener("readystatechange", () => {
+            console.log("readystatechange", document.readyState)
+        })
+        window.addEventListener("load", () => {
+            console.log("load")
+        })
+    </script>
+    <script src="index.js"></script>
 </head>
 <body>
     
