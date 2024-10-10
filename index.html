@@ -8,11 +8,14 @@
         document.addEventListener("readystatechange", () => {
             console.log("readystatechange", document.readyState)
         })
+        window.addEventListener("DOMContentLoaded", () => {
+            console.log("DOMContentLoaded")
+        })
         window.addEventListener("load", () => {
             console.log("load")
         })
     </script>
-    <script async src="index.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     
