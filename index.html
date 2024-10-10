@@ -7,6 +7,12 @@
     <script>
         document.addEventListener("readystatechange", () => {
             console.log("readystatechange", document.readyState)
+            if (document.readyState === "complete") {
+                const script = document.createElement("script")
+                script.setAttribute("src", "dependency.js")
+                script.setAttribute("async", "true")
+                document.body.appendChild(script)
+            }
         })
         window.addEventListener("DOMContentLoaded", () => {
             console.log("DOMContentLoaded")
@@ -15,7 +21,6 @@
             console.log("load")
         })
     </script>
-    <script defer src="index.js"></script>
 </head>
 <body>
     
